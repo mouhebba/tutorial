@@ -1,0 +1,6 @@
+{
+	"/list": {
+		"target": "http://localhost:8080/list",
+		"secure": false
+	}
+}

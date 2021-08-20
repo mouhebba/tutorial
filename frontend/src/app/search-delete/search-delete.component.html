@@ -1,0 +1,36 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+
+<div class="container">
+    <h3 class="text-center">Liste des employers</h3>
+<div class="container">
+    <div class="row col-md-6 col-md-offset-2 custyle">
+    <table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Prenom</th>
+            <th>Nom</th>
+            <th>Age</th>
+			<th>Numero</th>
+			<th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.id}}</td>
+            <td>{{employee.firstName}}</td>
+            <td>{{employee.lastName}}</td>
+			<td>{{employee.age}}</td>
+			<td>{{employee.number}}</td>
+            <td class="text-center"><button class="btn btn-danger btn-xs" (click)="delete(employee.id)"><span class="glyphicon glyphicon-remove"></span>Supprimer</button></td>
+            <td class="text-center"><button class="btn-xs" (click)="functionOnWhichRedirectShouldHappen(employee.id)"><span class="glyphicon"></span>Mise a jour</button></td>
+          </tr>
+    </tbody>
+    </table>
+    <button class="text-center btn" style="background-color: lightgreen;" (click)="create()">Ajouter</button>
+    </div>
+</div>
